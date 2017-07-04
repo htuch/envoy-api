@@ -61,9 +61,12 @@ message HealthCheck {
     Payload send = 1;
     Payload receive = 2;
   }
+  message RedisHealthCheck {
+  }
   oneof health_checker {
     HttpHealthCheck http_health_check = 9;
     TcpHealthCheck tcp_health_check = 10;
+    RedisHealthCheck redis_health_check = 11;
   }
 }
 
