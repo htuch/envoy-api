@@ -59,7 +59,10 @@ message HealthCheck {
   message TcpHealthCheck {
     // Empty payloads imply a connect-only health check.
     Payload send = 1;
-    Payload receive = 2;
+    // When checking the response, “fuzzy” matching is performed such that each
+    // binary block must be found, and in the order specified, but not
+    // necessarly contiguous.
+    repeated Payload receive = 2;
   }
   message RedisHealthCheck {
   }
