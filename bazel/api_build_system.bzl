@@ -69,6 +69,7 @@ def api_proto_library(name, srcs = [], deps = [], has_services = 0, require_py =
         external_deps = [
             "@com_google_protobuf//:cc_wkt_protos",
             "@googleapis//:http_api_protos",
+            "@googleapis//:rpc_status_protos",
         ],
         visibility = ["//visibility:public"],
     )

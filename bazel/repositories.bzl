@@ -59,9 +59,7 @@ py_proto_library(
 
 filegroup(
      name = "rpc_status_protos_src",
-     srcs = [
-         "google/rpc/status.proto",
-     ],
+     srcs = ["google/rpc/status.proto"],
      visibility = ["//visibility:public"],
 )
 
@@ -74,10 +72,10 @@ proto_library(
 
 cc_proto_library(
      name = "rpc_status_protos",
+     srcs = ["google/rpc/status.proto"],
      default_runtime = "@com_google_protobuf//:protobuf",
      protoc = "@com_google_protobuf//:protoc",
      deps = [
-         ":rpc_status_protos_lib",
          "@com_google_protobuf//:cc_wkt_protos"
      ],
      visibility = ["//visibility:public"],
