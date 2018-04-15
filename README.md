@@ -1,4 +1,3 @@
-
 # Data plane API
 
 This repository hosts the configuration and APIs that drive [Envoy](https://www.envoyproxy.io/). The
